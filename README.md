@@ -3,7 +3,7 @@
 > **Status: Initial submission (ideation stage).** This README reflects the ideas and concepts from our 22 October 2026 ideation session. It is not a working prototype yet, and we will keep updating this repository throughout the hackathon.
 
 **Team:** Funny Biz · 4 members · 3-day hackathon
-**Members:**: Chester Garcia, Nathaniel Regala, Siegfrid Santiago, Jim Luigi Tongcua
+**Members:** Chester Garcia, Nathaniel Regala, Siegfrid Santiago, Jim Luigi Tongcua
 ---
 
 ## 1. The idea in one paragraph
