@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 640 640" width="640" height="640" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Buwis Folder — app icon</title>
+  <desc id="logo-desc">The compact folder character on a mango rounded square. Editable vector artwork.</desc>
+  <rect x="0" y="0" width="640" height="640" rx="144" fill="#FFC63D" id="app-icon-background" />
+  <g id="app-icon-art" transform="translate(27 14) scale(.92)">
+    <g id="folder-character" transform="translate(4 38)">
+      <g id="folder-spine">
+        <path d="M90 188 L264 176 L505 216 Q531 220 533 245 L524 482 Q524 505 501 505 L102 500 Q78 500 77 478 L67 212 Q66 190 90 188 Z" fill="#073E30" />
+        <path d="M98 202 L471 219 L511 243 L500 484 L102 484 Z" fill="#176347" />
+        <path d="M111 197 L471 222 L509 243 L505 268 L101 237 L101 211 Q101 197 111 197 Z" fill="#FFF7E3" />
+      </g>
+      <path d="M107 215 L108 153 C108 138 117 131 132 130 L250 120 C266 119 276 125 282 139 L302 182 C306 191 313 195 323 196 L379 202 C397 204 406 213 407 231 L406 242 Z" fill="#FFC63D" id="tax-tab" stroke="#073E30" stroke-width="5" stroke-linejoin="round" />
+      <g id="documents">
+        <g id="back-sheet" transform="translate(277 95) rotate(11)">
+          <rect x="0" y="0" width="242" height="226" rx="10" fill="#E8DFC4" />
+        </g>
+        <g id="front-form" transform="translate(307 62) rotate(9)">
+          <rect x="0" y="0" width="212" height="232" rx="11" fill="#98A98A" />
+          <rect x="4" y="4" width="204" height="224" rx="8" fill="#FFF7E3" />
+          <path d="M30 43 H176" fill="none" stroke="#98A98A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M30 76 H137" fill="none" stroke="#98A98A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M30 109 H176" fill="none" stroke="#98A98A" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+      </g>
+      <g id="folder-front">
+        <path d="M132 210 C121 209 114 216 113 230 L102 478 C101 493 111 503 126 503 L508 509 C523 509 532 501 533 486 L544 273 C545 258 539 251 525 249 Z" fill="#073E30" id="outer-folder" />
+        <path d="M134 216 L523 255 C534 256 539 262 538 274 L527 485 C526 497 520 503 508 503 L127 497 C114 497 108 490 108 478 L119 231 C120 219 124 215 134 216 Z" fill="#176347" id="front-green-plane" />
+        <path d="M123 371 L422 414" fill="none" stroke="#073E30" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M363 503 L536 315 L527 485 C526 497 520 503 508 503 Z" fill="#FFC63D" id="mango-corner" />
+      </g>
+      <g id="face">
+        <path d="M247 292 Q260 283 274 292" fill="none" stroke="#073E30" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M352 286 Q363 276 376 280" fill="none" stroke="#073E30" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+        <ellipse cx="262" cy="327" rx="16" ry="24" fill="#073E30" />
+        <ellipse cx="366" cy="317" rx="16" ry="24" fill="#073E30" />
+        <ellipse cx="267" cy="319" rx="7" ry="10.5" fill="#FFF7E3" />
+        <ellipse cx="371" cy="309" rx="7" ry="10.5" fill="#FFF7E3" />
+        <ellipse cx="232" cy="357" rx="17" ry="8" fill="#F8836B" transform="rotate(-15 232 357)" />
+        <ellipse cx="397" cy="345" rx="17" ry="8" fill="#F8836B" transform="rotate(-15 397 345)" />
+        <path d="M294 357 C307 370 327 368 339 353" fill="none" stroke="#073E30" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </g>
+  </g>
+</svg>

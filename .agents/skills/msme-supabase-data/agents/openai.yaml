@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Supabase Data"
+  short_description: "Protect business data and implement reliable writes"
+  default_prompt: "Use $msme-supabase-data to implement business-scoped data access and transactional record persistence."

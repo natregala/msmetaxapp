@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Feature Development"
+  short_description: "Build readable feature modules with clear boundaries"
+  default_prompt: "Use $msme-feature-development to implement a feature with clear UI, service, rule, and data-access boundaries."

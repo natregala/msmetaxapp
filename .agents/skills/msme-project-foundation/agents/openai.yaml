@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Project Foundation"
+  short_description: "Load the product context and implementation decisions"
+  default_prompt: "Use $msme-project-foundation to orient to this Filipino MSME project and select the relevant workflow skills."

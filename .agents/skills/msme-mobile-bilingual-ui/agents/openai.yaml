@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Mobile and Bilingual UI"
+  short_description: "Build usable English and Tagalog workflows"
+  default_prompt: "Use $msme-mobile-bilingual-ui to implement a phone-first workflow while preserving the current visual-design decisions."

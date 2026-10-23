@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Financial Rules"
+  short_description: "Implement exact records and evidence-based tax drafts"
+  default_prompt: "Use $msme-financial-rules to implement deterministic bookkeeping rules and a verified draft-preparation path."

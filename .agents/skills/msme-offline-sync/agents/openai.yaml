@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Offline Drafts and Sync"
+  short_description: "Preserve local drafts and safely retry submissions"
+  default_prompt: "Use $msme-offline-sync to implement durable local drafts, visible sync states, and duplicate-safe submission."

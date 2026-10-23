@@ -1,0 +1,36 @@
+.banner {
+  margin: 0 auto 8px;
+  max-width: 920px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.copy summary {
+  min-height: 36px;
+  padding: 8px 0;
+  font-weight: 500;
+}
+.copy[open] {
+  background: var(--warning-bg);
+  border-radius: 10px;
+  padding: 0 12px 12px;
+}
+.copy p {
+  margin: 4px 0 8px;
+  max-width: 640px;
+}
+.reset {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+}
+@media print {
+  .reset {
+    display: none;
+  }
+  .copy summary {
+    list-style: none;
+  }
+}

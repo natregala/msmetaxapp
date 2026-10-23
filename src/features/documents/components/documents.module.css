@@ -1,0 +1,268 @@
+.workspace {
+  display: grid;
+  gap: 1.2rem;
+  min-width: 0;
+}
+.workspace h1 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin: 0 0 0.5rem;
+}
+.workspace h2 {
+  font-size: 1.25rem;
+}
+.workspace label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+}
+.workspace input:not([type="checkbox"]),
+.workspace select {
+  min-height: 48px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: var(--surface);
+  color: var(--text);
+}
+.workspace input[type="file"] {
+  white-space: normal;
+  max-width: 100%;
+}
+.captureLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.capture,
+.pages,
+.editor,
+.source {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  min-width: 0;
+}
+.capture {
+  display: grid;
+  gap: 1rem;
+}
+.capture p {
+  margin: 0;
+}
+.preview {
+  display: block;
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.pages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.pages li button {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+  text-align: left;
+  min-height: 70px;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.pages li span {
+  font-size: 0.88rem;
+  font-weight: 400;
+}
+.reviewLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.source {
+  position: sticky;
+  top: 1rem;
+}
+.source img {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.source a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+.source details {
+  margin-top: 1rem;
+}
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+.fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+.fields p {
+  margin: 0.2rem 0;
+}
+.check {
+  display: flex !important;
+  gap: 0.8rem !important;
+  align-items: flex-start;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+}
+.check input {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0.1rem 0 0;
+}
+.rowNavigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+}
+.rowNavigation button {
+  min-height: 44px;
+  min-width: 44px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1.2rem 0;
+}
+.actions button {
+  flex: 1 1 180px;
+  min-height: 48px;
+  white-space: normal;
+}
+.hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.status {
+  padding: 0.7rem 1rem;
+  background: var(--success-bg);
+  border-radius: 10px;
+  margin: 0;
+}
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--mango);
+  border-radius: var(--radius);
+  overflow-wrap: anywhere;
+}
+.comparison > p {
+  grid-column: 1/-1;
+}
+.editor dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin: 0;
+}
+.editor dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.workspace button {
+  white-space: normal;
+}
+@media (max-width: 800px) {
+  .captureLayout,
+  .reviewLayout {
+    grid-template-columns: 1fr;
+  }
+  .source {
+    position: static;
+  }
+  .source img {
+    max-height: 300px;
+  }
+  .capture,
+  .pages,
+  .editor,
+  .source {
+    padding: 1rem;
+  }
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .workspace button,
+  .workspace input[type="file"] {
+    display: none;
+  }
+  .source {
+    position: static;
+  }
+}
+
+.captureLayout {
+  max-width: 660px;
+  margin: 0 auto;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+.capture {
+  border: 0;
+  padding: 0;
+}
+.pages {
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+}
+.pages > summary {
+  font-weight: 650;
+}
+.workspace > .text-button {
+  justify-self: start;
+}
+.workspace > div > h1 {
+  margin-bottom: 16px;
+}
+.workspace > div:has(> h1) {
+  width: min(100%, 660px);
+  margin: auto;
+}
+.reviewLayout {
+  gap: 24px;
+}
+.source,
+.editor {
+  border: 0;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  .source img {
+    max-height: 240px;
+  }
+}

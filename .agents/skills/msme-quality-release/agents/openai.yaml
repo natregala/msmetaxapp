@@ -1,0 +1,4 @@
+interface:
+  display_name: "MSME Quality and Release"
+  short_description: "Verify complete workflows and prepare honest demos"
+  default_prompt: "Use $msme-quality-release to verify the affected workflow and prepare an accurately described demonstration."

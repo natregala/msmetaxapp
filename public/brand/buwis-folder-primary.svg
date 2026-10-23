@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 640 640" width="640" height="640" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Buwis Folder — primary character</title>
+  <desc id="logo-desc">A forest-green folder with a mango BUWIS tab, angled cream peso form, friendly face, coral cheeks, yellow corner and small feet. Editable vector artwork.</desc>
+  <g id="folder-character" transform="translate(4 8)">
+    <g id="feet">
+      <path d="M196 486 L241 490 L205 538 C202 542 197 544 190 544 L157 544 C145 544 143 536 153 530 L180 513 Z" fill="#073E30" />
+      <path d="M386 495 L425 495 L445 529 L465 520 C476 516 486 521 485 529 C484 534 478 538 469 541 L440 550 C431 552 425 550 420 543 Z" fill="#073E30" />
+    </g>
+    <g id="folder-spine">
+      <path d="M90 188 L264 176 L505 216 Q531 220 533 245 L524 482 Q524 505 501 505 L102 500 Q78 500 77 478 L67 212 Q66 190 90 188 Z" fill="#073E30" />
+      <path d="M98 202 L471 219 L511 243 L500 484 L102 484 Z" fill="#176347" />
+      <path d="M111 197 L471 222 L509 243 L505 268 L101 237 L101 211 Q101 197 111 197 Z" fill="#FFF7E3" />
+    </g>
+    <path d="M107 215 L108 153 C108 138 117 131 132 130 L250 120 C266 119 276 125 282 139 L302 182 C306 191 313 195 323 196 L379 202 C397 204 406 213 407 231 L406 242 Z" fill="#FFC63D" id="tax-tab" />
+    <g id="tab-lettering" transform="translate(134 155) rotate(-5) scale(.8)">
+      <path d="M0 0 H12 C19 0 23 3 23 8 C23 12 21 14 18 15 C22 16 24 19 24 23 C24 29 19 32 12 32 H0 Z M7 6 V12 H11 C14 12 16 11 16 9 C16 7 14 6 11 6 Z M7 19 V26 H12 C15 26 17 25 17 22.5 C17 20 15 19 12 19 Z" fill="#073E30" fill-rule="evenodd" transform="translate(0 0)" id="tab-glyph-1" />
+      <path d="M0 0 H7 V20 C7 24 9 26 12 26 C15 26 17 24 17 20 V0 H24 V20 C24 28 20 33 12 33 C4 33 0 28 0 20 Z" fill="#073E30" fill-rule="evenodd" transform="translate(30 0)" id="tab-glyph-2" />
+      <path d="M0 0 H7 L11 22 L16 3 H22 L27 22 L31 0 H38 L31 32 H24 L19 14 L14 32 H7 Z" fill="#073E30" fill-rule="evenodd" transform="translate(60 0)" id="tab-glyph-3" />
+      <path d="M0 0 H7 V32 H0 Z" fill="#073E30" fill-rule="evenodd" transform="translate(104 0)" id="tab-glyph-4" />
+      <path d="M22 2 L20 8 C17 6 14 6 11 6 C8 6 6 7 6 9 C6 11 9 12 13 13 C20 15 24 17 24 23 C24 30 18 33 11 33 C7 33 3 32 0 30 L2 24 C5 26 8 27 11 27 C15 27 17 26 17 24 C17 22 14 21 10 20 C3 18 0 15 0 10 C0 3 5 0 12 0 C16 0 20 1 22 2 Z" fill="#073E30" fill-rule="evenodd" transform="translate(118 0)" id="tab-glyph-5" />
+    </g>
+    <g id="documents">
+      <g id="back-sheet" transform="translate(277 95) rotate(11)">
+        <rect x="0" y="0" width="242" height="226" rx="10" fill="#E8DFC4" />
+      </g>
+      <g id="front-form" transform="translate(307 62) rotate(9)">
+        <rect x="0" y="0" width="212" height="232" rx="11" fill="#98A98A" />
+        <rect x="4" y="4" width="204" height="224" rx="8" fill="#FFF7E3" />
+        <g id="peso-symbol" transform="translate(24 25) scale(0.77)">
+          <path d="M7 0 H23 C37 0 44 9 44 20 C44 33 36 41 23 41 H16 V55 H7 Z M16 9 V32 H22 C31 32 35 28 35 20 C35 13 31 9 22 9 Z" fill="#073E30" fill-rule="evenodd" />
+          <rect x="0" y="13" width="51" height="5" rx="2.5" fill="#073E30" />
+          <rect x="0" y="23" width="51" height="5" rx="2.5" fill="#073E30" />
+        </g>
+        <path d="M83 35 H178" fill="none" stroke="#98A98A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M83 53 H149" fill="none" stroke="#98A98A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+        <rect x="26" y="93" width="160" height="42" rx="1" fill="#98A98A" />
+        <rect x="30" y="97" width="92" height="34" rx="0" fill="#FFF7E3" />
+        <rect x="126" y="97" width="56" height="34" rx="0" fill="#FFF7E3" />
+        <path d="M42 112 H105" fill="none" stroke="#98A98A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M138 112 H170" fill="none" stroke="#98A98A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M29 155 H173" fill="none" stroke="#98A98A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </g>
+    <g id="folder-front">
+      <path d="M132 210 C121 209 114 216 113 230 L102 478 C101 493 111 503 126 503 L508 509 C523 509 532 501 533 486 L544 273 C545 258 539 251 525 249 Z" fill="#073E30" id="outer-folder" />
+      <path d="M134 216 L523 255 C534 256 539 262 538 274 L527 485 C526 497 520 503 508 503 L127 497 C114 497 108 490 108 478 L119 231 C120 219 124 215 134 216 Z" fill="#176347" id="front-green-plane" />
+      <path d="M123 371 L422 414" fill="none" stroke="#073E30" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M363 503 L536 315 L527 485 C526 497 520 503 508 503 Z" fill="#FFC63D" id="mango-corner" />
+    </g>
+    <g id="face">
+      <path d="M246 288 Q258 280 272 287" fill="none" stroke="#073E30" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M351 279 Q362 268 375 271" fill="none" stroke="#073E30" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+      <ellipse cx="261" cy="321" rx="14" ry="22" fill="#073E30" />
+      <ellipse cx="365" cy="311" rx="14" ry="22" fill="#073E30" />
+      <ellipse cx="266" cy="313" rx="4.5" ry="7.5" fill="#FFF7E3" />
+      <ellipse cx="370" cy="303" rx="4.5" ry="7.5" fill="#FFF7E3" />
+      <ellipse cx="233" cy="355" rx="16" ry="8" fill="#F8836B" transform="rotate(-15 233 355)" />
+      <ellipse cx="396" cy="340" rx="16" ry="8" fill="#F8836B" transform="rotate(-15 396 340)" />
+      <path d="M292 350 C305 364 326 361 337 346" fill="none" stroke="#073E30" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>

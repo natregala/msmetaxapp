@@ -1,0 +1,504 @@
+/* Kitang-Kita: the supplied journey references, adapted to narrow phones.
+   Existing controls keep their semantics; secondary content uses disclosure. */
+:root {
+  --brand: #17634b;
+  --ink: #083f33;
+  --background: #fff7e2;
+  --text: #183f35;
+  --border: #d9e1d5;
+  --radius: 14px;
+}
+body {
+  background: var(--surface);
+}
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  text-wrap: balance;
+}
+h1 {
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.app-header {
+  background: white;
+}
+.header-inner {
+  max-width: 1100px;
+  padding: 14px 24px;
+}
+.brand-logo {
+  width: 44px;
+  height: 44px;
+}
+.brand-name {
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+.language-switch {
+  background: white;
+  padding: 3px;
+  border-radius: 12px;
+}
+.language-switch button {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.language-switch button[aria-pressed="true"] {
+  background: var(--brand);
+  box-shadow: none;
+}
+.workspace {
+  max-width: 1100px;
+  min-height: calc(100dvh - 85px);
+  padding: 12px 24px 28px;
+}
+.workspace-toolbar {
+  max-width: 920px;
+  margin: 0 auto 20px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.guided-workspace:has(.focused-entry) .workspace-toolbar {
+  margin-bottom: 0;
+}
+.current-business strong {
+  font-size: 0.95rem;
+}
+.current-business span {
+  display: none;
+}
+.toolbar-context {
+  font-size: 0.85rem;
+}
+.task-home,
+.focused-entry,
+.guided-entry,
+.guided-setup {
+  max-width: 660px;
+  width: 100%;
+}
+.task-home {
+  padding-top: 4px;
+}
+.home-intro {
+  margin-bottom: 26px;
+}
+.home-intro h1,
+.journey-card h1,
+.guided-card h1 {
+  font-size: clamp(1.8rem, 4vw, 2.55rem);
+  line-height: 1.15;
+}
+.task-choices {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.task-choice {
+  min-height: 64px;
+  padding: 17px 20px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.task-choice strong {
+  font-size: 1.1rem;
+}
+.task-choice > span {
+  flex: 1;
+}
+.expense-choice {
+  background: #f4f6ef;
+}
+.home-secondary-actions {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+.home-tools {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.home-tools .button {
+  justify-content: space-between;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #e9eee5;
+  padding: 14px 4px;
+  font-size: 1rem;
+}
+.home-tools .button::after {
+  content: "→" / "";
+}
+.home-secondary-actions > details {
+  border-top: 1px solid var(--border);
+}
+.home-records {
+  margin-top: 26px;
+}
+.home-records .card {
+  border: 0;
+}
+.home-records .records-heading {
+  padding: 0 0 12px;
+}
+.home-records .record-list {
+  padding: 0;
+}
+.home-records .records-footer {
+  padding: 12px 0;
+}
+.record-title,
+.record-amount {
+  font-size: 1rem;
+}
+.record-meta {
+  font-size: 0.85rem;
+}
+.record-status {
+  font-size: 0.75rem;
+}
+.resume-card {
+  padding: 14px 16px;
+  margin: 0;
+  border-radius: 10px;
+}
+.drafts-disclosure {
+  margin: 0 0 20px;
+  border-block: 1px solid var(--border);
+}
+.drafts-disclosure > summary {
+  font-weight: 650;
+}
+.drafts-disclosure[open] {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 12px;
+}
+.journey-card,
+.guided-card {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.guided-card-body {
+  padding: 0;
+}
+.focused-entry .guided-card-body {
+  padding: 0;
+}
+.journey-card h1,
+.guided-card h1 {
+  margin-bottom: 26px;
+}
+.task-navigation {
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  min-height: 44px;
+}
+.task-navigation .text-button {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.task-navigation .text-button::before {
+  content: "←" / "";
+}
+.journey-progress,
+.guided-progress {
+  display: none;
+}
+.field label {
+  font-size: 0.95rem;
+  font-weight: 550;
+}
+.field input,
+.field select,
+.field textarea {
+  background: #fcfdf9;
+  border-color: var(--border);
+  border-radius: 10px;
+  min-height: 54px;
+  font-size: 1.05rem;
+}
+.field input[type="date"] {
+  min-width: 0;
+  font-weight: 650;
+}
+.focused-entry .amount-field input {
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 750;
+  min-height: 92px;
+  padding-left: 46px;
+}
+.focused-entry .amount-field > span {
+  top: 18px;
+  font-size: 2rem;
+  color: var(--ink);
+}
+.guided-fields {
+  gap: 18px;
+}
+.button {
+  font-size: 1rem;
+  min-height: 52px;
+  border-radius: 10px;
+  padding: 13px 18px;
+}
+.button.primary.full {
+  justify-content: space-between;
+  text-align: left;
+}
+.button.primary.full:not(:has(svg))::after {
+  content: "→" / "";
+  margin-left: auto;
+}
+.button.secondary {
+  background: #f4f6ef;
+}
+.text-button {
+  font-size: 0.95rem;
+}
+.small-note,
+.field-hint,
+.context-help {
+  font-size: 0.875rem;
+}
+.guided-save-status {
+  font-size: 0.8rem;
+  border: 0;
+  padding: 14px 0 0;
+  margin-top: 8px;
+}
+.payment-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.choice-card {
+  min-height: 56px;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+}
+.choice-card strong {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.choice-card:has(input:checked) {
+  background: #fff4cd;
+  border-color: #d5a22b;
+  box-shadow: none;
+}
+.choice-card input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.activity-choices {
+  display: grid;
+  gap: 10px;
+}
+.activity-choices .choice-card {
+  min-height: 58px;
+}
+.review-amount {
+  margin: 0 0 16px;
+}
+.review-row {
+  font-size: 1rem;
+}
+.review-edit-actions {
+  justify-content: space-between;
+}
+.guided-success {
+  text-align: left;
+}
+.guided-success > .chip {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.guided-success .button + .button {
+  margin-top: 10px;
+}
+.guided-success .balance-strip {
+  width: 100%;
+}
+.balance-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px 0;
+  border-block: 1px solid var(--border);
+  margin: 8px 0 24px;
+}
+.balance-strip dt {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.balance-strip dd {
+  font-size: clamp(1.1rem, 3vw, 1.65rem);
+  font-weight: 750;
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.quiet-details {
+  min-width: 0;
+  max-width: 100%;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.quiet-details > summary {
+  color: var(--brand);
+}
+.quiet-details p {
+  margin: 8px 0;
+}
+.app-footer {
+  max-width: 660px;
+  margin: 30px auto 0;
+  padding-top: 0;
+  border-top: 1px solid #e9eee5;
+}
+.auth-layout {
+  max-width: 660px;
+  display: block;
+  margin: 36px auto;
+}
+.auth-art {
+  display: none;
+}
+.auth-form h1 {
+  font-size: clamp(1.8rem, 4vw, 2.55rem);
+}
+.alert {
+  font-size: 0.95rem;
+}
+@media (min-width: 760px) {
+  body {
+    background: var(--background);
+    padding: 28px 32px;
+  }
+  .app-header {
+    max-width: 1100px;
+    margin: auto;
+    border: 1px solid var(--border);
+    border-radius: 22px 22px 0 0;
+  }
+  .header-inner {
+    padding: 18px 32px;
+  }
+  .workspace {
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 22px 22px;
+    min-height: calc(100dvh - 142px);
+    padding: 14px 40px 32px;
+  }
+  .home-tools {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .home-tools .button {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 420px) {
+  .header-inner {
+    padding: 10px 16px;
+    gap: 6px;
+    flex-wrap: nowrap;
+  }
+  .brand-lockup {
+    gap: 5px;
+  }
+  .brand-logo {
+    width: 32px;
+    height: 36px;
+  }
+  .brand-name {
+    font-size: 1.05rem;
+  }
+  .language-switch button {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+  .workspace {
+    padding: 8px 20px 24px;
+  }
+  .workspace-toolbar {
+    margin-bottom: 18px;
+  }
+  .account-menu summary {
+    padding: 8px;
+  }
+  .account-menu summary svg {
+    display: none;
+  }
+  .balance-strip {
+    gap: 8px;
+  }
+  .payment-choices {
+    gap: 8px;
+  }
+  .choice-card {
+    padding: 12px 10px;
+    gap: 8px;
+  }
+  .choice-card strong {
+    font-size: 0.95rem;
+  }
+  .guided-card-body {
+    padding: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
+@media print {
+  body {
+    padding: 0;
+    background: white;
+  }
+  .workspace {
+    padding: 0;
+    border: 0;
+    max-width: none;
+  }
+  .app-header,
+  .app-footer,
+  .workspace-toolbar,
+  .task-navigation {
+    display: none !important;
+  }
+}
