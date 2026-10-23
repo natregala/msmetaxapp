@@ -1,6 +1,6 @@
 # Filipino MSME business records
 
-Current import: the mobile UI redesign is a work in progress, saved at the user's request before the remaining fixes. See [UI checkpoint and open issues](docs/development/ui-checkpoint-2026-10-23.md). Earlier verification records do not certify this unfinished redesign.
+The phone UI now uses simpler task screens, larger controls and guarded Back navigation. See [design and function map](docs/design/README.md) and the [UI verification update](docs/development/ui-checkpoint-2026-10-23.md). Older-owner and fluent Tagalog validation remain outstanding.
 
 A phone-first English/Tagalog app for microbusiness recordkeeping and reviewable preparation, targeting a proposed Quezon City pilot. The exact pilot boundary and first business segment remain research decisions. Built with Next.js, TypeScript, and Supabase.
 

@@ -69,3 +69,8 @@ Deliver selected references, design decisions, reusable component requirements, 
 - [Tailwind browser compatibility](https://tailwindcss.com/docs/compatibility)
 
 Recheck version-sensitive documentation during implementation.
+
+
+## User-selected direction, 23 October 2026
+
+The user supplied the Kitang-Kita UI screenshots and requested implementation for older and less technically confident Quezon City microbusiness owners using phones. Current implementation uses a white canvas, green primary actions, bold questions, native system fonts, fewer initial choices, and expandable secondary information. Preserve every existing function and unfinished work when navigating or changing languages. See `docs/design/README.md` for the feature map and `docs/development/ui-checkpoint-2026-10-23.md` for actual verification and remaining user-validation needs.

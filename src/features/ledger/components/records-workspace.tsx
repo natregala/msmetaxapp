@@ -131,7 +131,9 @@ export const RecordsWorkspace = forwardRef<RecordsWorkspaceHandle, Props>(
       (next) => {
         setView(next.view as RecordsView);
         setSelected(typeof next.selected === "string" ? next.selected : null);
-        if (!next.reviewing) setReview(null);
+        // Require review of the latest saved answers after browser navigation.
+        // Never revive a command assembled before the owner edited those answers.
+        setReview(null);
         const payment = detail?.payments.find(
           (item) => item.id === next.paymentId,
         );

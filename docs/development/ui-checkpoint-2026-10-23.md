@@ -1,4 +1,30 @@
-# UI checkpoint — 23 October 2026
+# UI verification update — 23 October 2026
+
+The paused import is preserved in Git commit `50ea3ed`. The user subsequently resumed UI improvement, prioritizing Back and saved states. The earlier checkpoint text below records the state of that import.
+
+## Completed after resuming
+
+- Acceptance reports its operation ID explicitly; browser Back no longer recreates a completed draft as an empty review.
+- Setup-to-entry and Add another use separate draft IDs. History stage restoration validates the latest answers before displaying review.
+- Corrections return to the editor for fresh review after browser navigation, preserving editor drafts rather than reviving an obsolete command.
+- Increased secondary-action/language touch targets, field-label weight and size, and status text size. The phone task layout, expandable advanced controls, report printing and all existing feature entry points remain available. See the [function map](../design/README.md).
+
+## Executed checks
+
+- `npm run lint`: passed.
+- `npm run typecheck`: passed.
+- `npm test`: 248 passed across 30 files.
+- `npm run build`: passed, all 19 routes generated/collected.
+- Browser demo on localhost:3004, Chromium, service workers blocked: 9 passed in 29.3 seconds. Command: `E2E_DEMO=1 E2E_BASE_URL=http://localhost:3004 npx playwright test tests/e2e/ui-journey.spec.ts tests/e2e/demo.spec.ts tests/e2e/demo-documents.spec.ts` (set environment variables using the shell's syntax).
+- Covered phone Back, browser Back/Forward, raw unfinished amounts, language switching, draft save/reload, storage-write failure and recovery, setup, separate repeated entries, notebook/source review, partial/later payments, history, period summary/CSV, report overflow, and complete print expansion. Screenshots inspected for home, transaction review and notebook review. Widths include 320px, 390px and laptop.
+- An intermediate run had two test issues: autosave recovered before a retry-button click, and an incorrect Add another selector. Both were corrected; the full nine-test rerun passed.
+
+These browser checks use synthetic browser-only demo transport, not live authenticated Supabase writes. Existing database/service tests passed, but the complete authenticated browser suite was not rerun. Physical phones, older-owner usability and fluent Tagalog review remain outstanding. No deployment was performed.
+
+---
+
+## Historical import checkpoint
+
 
 The user requested importing the current files to `natregala/msmetaxapp` on `main` now and continuing the redesign later. This is an unfinished development checkpoint, not a completed UI release.
 

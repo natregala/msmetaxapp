@@ -515,7 +515,10 @@ export const GuidedWorkspace = forwardRef<GuidedWorkspaceHandle, Props>(
       setView(task);
       setDrafts([]);
       setErrorCode(null);
-      if (task !== "home") setEntryKind(task);
+      if (task !== "home") {
+        setEntryKind(task);
+        setSelectedDraftId(crypto.randomUUID());
+      }
     }
 
     function updateBusiness(business: Business) {
@@ -708,9 +711,9 @@ export const GuidedWorkspace = forwardRef<GuidedWorkspaceHandle, Props>(
                 setView("home");
                 setRefreshKey((key) => key + 1);
               }}
-              onAccepted={() => {
-                const id = form.current?.snapshot()?.operationId;
-                if (id) completedDrafts.current.add(id);
+              onNewEntry={() => startTask(entryKind)}
+              onAccepted={(id) => {
+                completedDrafts.current.add(id);
                 setRefreshKey((key) => key + 1);
               }}
               disabled={busy}

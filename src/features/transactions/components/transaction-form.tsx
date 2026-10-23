@@ -36,6 +36,7 @@ import {
   selectPaymentAnswer,
   todayInManila,
   validateDraft,
+  validateGuidedStep,
 } from "../transaction.rules";
 import type {
   Business,
@@ -60,7 +61,8 @@ type Props = {
   initialKind?: "sale" | "expense" | "owner_contribution" | "owner_withdrawal";
   draftId?: string;
   businessActivity?: Business["activity"];
-  onAccepted: () => void;
+  onAccepted: (operationId: string) => void;
+  onNewEntry?: () => void;
   onHome: () => void;
   onViewRecord?: (id: string) => void;
   disabled?: boolean;
@@ -118,6 +120,7 @@ export const TransactionForm = forwardRef<TransactionFormHandle, Props>(
       draftId,
       businessActivity,
       onAccepted,
+      onNewEntry,
       onHome,
       onViewRecord,
       disabled = false,
@@ -329,7 +332,19 @@ export const TransactionForm = forwardRef<TransactionFormHandle, Props>(
           next.stage === "payment" ||
           next.stage === "review"
         ) {
-          const step = next.stage;
+          // History restores navigation only; validate against the latest answers.
+          let step: "amount" | "payment" | "review" = next.stage;
+          if (isGuided && step !== "amount") {
+            if (Object.keys(validateDraft(state.draft)).length) step = "amount";
+            else if (step === "review") {
+              const check = validateGuidedStep({
+                ...state,
+                guidedStep: "review",
+              });
+              if (check.problem || Object.keys(check.errors).length)
+                step = "payment";
+            }
+          }
           change({
             ...state,
             step: step === "review" ? "review" : "edit",
@@ -490,7 +505,7 @@ export const TransactionForm = forwardRef<TransactionFormHandle, Props>(
         acceptedRef.current = true;
         setAccepted(true);
         await writer.current;
-        onAccepted();
+        onAccepted(pending.operationId);
         await deleteDraft(userId, businessId, pending.operationId);
         persisted.current = null;
         if (alive.current) setCleaned(true);
@@ -549,6 +564,10 @@ export const TransactionForm = forwardRef<TransactionFormHandle, Props>(
     }
     function another() {
       if (!cleaned) return;
+      if (onNewEntry) {
+        onNewEntry();
+        return;
+      }
       acceptedRef.current = false;
       setAccepted(false);
       setCleaned(false);

@@ -502,3 +502,35 @@ summary:focus-visible {
     display: none !important;
   }
 }
+
+/* Comfortable phone controls, including secondary and recovery actions. */
+.text-button,
+.journey-back-link,
+.language-switch button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.field label {
+  font-size: 1rem;
+  font-weight: 650;
+}
+.record-meta,
+.guided-save-status,
+.toolbar-context {
+  font-size: 0.9rem;
+}
+.record-status {
+  font-size: 0.875rem;
+}
+.payment-choices .choice-card strong {
+  font-size: 1rem;
+}
+@media (max-width: 420px) {
+  .language-switch button {
+    font-size: 0.875rem;
+  }
+  .choice-card strong {
+    font-size: 1rem;
+  }
+}
